@@ -8,14 +8,14 @@ on:
 jobs:
   checkout-and-run:
     runs-on: self-hosted
-
+    
     strategy:
       matrix:
         node-version: [16.x]
 
     steps:
       - name: checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: setup node ${{matrix.node-version}}
         uses: actions/setup-node@v3
         with:
